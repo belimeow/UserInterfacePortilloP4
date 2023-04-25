@@ -74,7 +74,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Check if the user has pressed the P key
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ChangePause();
+        }
     }
     public void StartGame(int difficulty)
     {
@@ -95,7 +99,7 @@ public class GameManager : MonoBehaviour
         {
             paused = true;
             pauseScreen.SetActive(true);
-            Time.timeScale = 1;
+            Time.timeScale = 0;
 
         }
         else
