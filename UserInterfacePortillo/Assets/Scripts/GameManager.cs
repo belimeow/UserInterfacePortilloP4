@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            paused = true;
+            paused = false;
             pauseScreen.SetActive(false);
             Time.timeScale = 1;
         }
